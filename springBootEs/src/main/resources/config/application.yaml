@@ -1,0 +1,30 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+#配置Es的ip地址
+  elasticsearch:
+    ip: 192.168.177.131
+
+#配置Es的端口号(是9300-->是java连接Es的端口号)
+    port: 9300
+#配置Es的集群名称
+    clusterName: my-application
+#配置Es的节点名称
+    nodeName: node-1
+#配置Es的线程池
+    pool: 5
+
+
+
+mybatis:
+  type-aliases-package: com.aaa.model
+  mapper-locations: classpath:mapper/*Mapper.xml
+
